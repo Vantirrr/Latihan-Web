@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fathir F nya Ganteng</title>
+    <style>
+        body {
+            background-color: pink;
+            color: white;
+            font-style: italic;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow-x: hidden; /* Supaya gambar animasi tidak menyebabkan scroll horizontal */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-style: italic;
+            cursor: pointer;
+            background-color: white;
+            color: pink;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ffc0cb;
+            color: white;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        /* Animasi gambar mobil berjalan dari kiri ke kanan */
+        #car {
+            position: fixed;
+            bottom: 10px;
+            left: -200px;
+            width: 150px;
+            animation: moveCar 10s linear infinite;
+        }
+        @keyframes moveCar {
+            0% {
+                left: -200px;
+            }
+            100% {
+                left: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Fathir F nya Ganteng</h1>
+    <p>Halo nama saya Muhammad Fathir Al Ghifari, Salam Kenal</p>
+
+    <button id="loveBtn">Tekan ini sayang</button>
+    <div id="message"></div>
+
+    <!-- Gambar mobil animasi -->
+    <img id="car" src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Mobil" />
+
+    <script>
+        const btn = document.getElementById('loveBtn');
+        const message = document.getElementById('message');
+
+        btn.addEventListener('click', () => {
+            message.textContent = 'Citra lu cantik banget sumpah';
+        });
+    </script>
+</body>
+</html>
+
